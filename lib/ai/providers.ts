@@ -4,6 +4,10 @@ import {
   wrapLanguageModel,
 } from 'ai';
 import { xai } from '@ai-sdk/xai';
+import { openai } from '@ai-sdk/openai';
+import { anthropic } from '@ai-sdk/anthropic';
+import { google } from '@ai-sdk/google';
+import { groq } from '@ai-sdk/groq';
 import { isTestEnvironment } from '../constants';
 import {
   artifactModel,
@@ -35,3 +39,31 @@ export const myProvider = isTestEnvironment
         'small-model': xai.image('grok-2-image'),
       },
     });
+
+// OpenAI provider stub
+export const openAIProvider = customProvider({
+  languageModels: {
+    'chat-model': openai('gpt-4o'),
+  },
+});
+
+// Anthropic provider stub
+export const anthropicProvider = customProvider({
+  languageModels: {
+    'chat-model': anthropic('claude-3-opus-20240229'),
+  },
+});
+
+// Google provider stub
+export const googleProvider = customProvider({
+  languageModels: {
+    'chat-model': google('gemini-1.5-pro-latest'),
+  },
+});
+
+// Groq provider stub
+export const groqProvider = customProvider({
+  languageModels: {
+    'chat-model': groq('llama3-70b-8192'),
+  },
+});

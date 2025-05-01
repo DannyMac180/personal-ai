@@ -1,0 +1,9 @@
+This project is a template from Vercel called the Chat SDK.
+
+It uses the AI SDK to provide LLM based chat services.
+
+The AI SDK is a set of tools and utilities for building AI-powered applications.
+
+The entire documentation for the AI SDK is saved at docs/ai-sdk.txt.
+
+When you need context about how to use the AI SDK, please read the docs/ai-sdk.txt file.
